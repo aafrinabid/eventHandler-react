@@ -1,15 +1,26 @@
 import React, { Component } from 'react'
 
  class classClick extends Component {
+constructor(props) {
+  super(props)
+
+  this.state = {
+     message:'hello'
+  }
+}
+
  clickHandler() {
-    console.log('fuck you why you did tht again just so you know its hurting me')
+    this.setState({
+        message:'bye bye this will be the time i am saying then you will be seeig my mom saying that i leaving for usa ....psychhhh thats the wrong number'
+    })
     
 }
 
   render() {
     return (
       <div>
-<button onClick={this.clickHandler}>click me ok</button>
+          <div>{this.state.message}</div>
+<button onClick={this.clickHandler.bind(this)}>click me ok</button>
 
 
       </div>
